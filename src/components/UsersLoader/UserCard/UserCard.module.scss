@@ -1,0 +1,22 @@
+@import '../../../common/styles/templates';
+@import '../../../common/styles/vars';
+
+.wrapperCard{
+  width: 220px;
+  margin: 0 15px 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.userCardMaleStyle{
+  box-shadow: 0 0 10px 4px $blue-color;
+}
+
+.userCardFemaleStyle{
+  box-shadow: 0 0 10px 4px $pink-color;
+}
+
+.wrapperCard:hover{
+    box-shadow: 0 0 10px 4px $mint-color;
+}

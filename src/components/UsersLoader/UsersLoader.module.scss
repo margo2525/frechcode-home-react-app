@@ -1,0 +1,42 @@
+@import '../../common/styles/templates';
+@import '../../common/styles/vars';
+
+.wrapper{
+  width: 100%;
+}
+
+.container{
+  width: 1480px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 0;
+  background: $lite-pink;
+}
+
+.container:hover{
+  box-shadow: 0 0 8px 3px $pink-color;
+}
+
+.userListWrap{
+  @extend %flex-jc-sb;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.btnAddMore{
+  width: 100%;
+  margin-top: 30px;
+  padding: 5px;
+  font-size: 20px;
+  border: 2px solid $pink-color;
+  border-radius: 5px;
+  background-color: $lite-pink;
+  color: $pink-color;
+  font-weight: 600;
+}
+
+.btnAddMore:hover{
+  box-shadow: 0 0 4px 2px $pink-color;
+}

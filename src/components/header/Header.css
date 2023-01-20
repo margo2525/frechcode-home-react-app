@@ -1,0 +1,17 @@
+/* Header */
+
+.headerGL {
+
+	min-height: 900px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color:rgb(4, 35, 40);
+
+
+	color: whitesmoke;
+	text-align: center;
+}
+

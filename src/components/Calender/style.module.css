@@ -1,0 +1,111 @@
+.calendarCard{
+	margin: 0;
+	padding: 0;
+	
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	
+	background-color: rgb(14, 84, 103);
+}
+.calendar1{
+	padding:50px ;
+	text-align: center;
+	width:500px ;
+	height:500px ;
+	background-color:rgb(133, 196, 214);
+	
+}
+.calendar{
+	padding:50px ;
+	width:500px ;
+	height:500px ;
+	background-color:rgb(225, 232, 233);
+	
+}
+
+.calendar header {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 8px;
+}
+
+.calendar header button,
+.calendar header select {
+	margin: 0 4px;
+}
+
+.calendar table {
+	table-layout: fixed;
+	border-collapse: separate;
+	border-spacing: 0;
+	margin: auto;
+}
+
+.calendar th {
+	vertical-align: middle;
+	text-align: center;
+	height: 36px;
+}
+
+.calendar .day {
+	padding: 4px 8px;
+	vertical-align: middle;
+	text-align: center;
+	border: 2px solid transparent;
+}
+
+.calendar .day:hover {
+	background-color: #eaeaea;
+	cursor: pointer;
+}
+
+.calendar .day.selected {
+	border: 2px solid dodgerblue;
+}
+
+.calendar .day.today {
+	background-color: dodgerblue;
+	color: white;
+}
+
+.calendar .day.today:hover {
+	background-color: #0081ff;
+}
+
+.calendar .day.today.selected {
+	border: 2px solid lightgray;
+}
+
+	
+
+
+button, select {
+	height: 2em;
+	font-size: 1rem;
+	background-color: rgb(107, 214, 183);
+	color: #1a0505;
+	border: 1px solid #dbdbdb;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:focus, select:focus {
+	outline: none;
+}
+
+button {
+	background-color: aquamarine;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: .25em .75em;
+	text-align: center;
+}
+
+select {
+	padding: .25em .5em;
+}

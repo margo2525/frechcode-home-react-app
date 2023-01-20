@@ -1,0 +1,52 @@
+.userCadr{
+	width: 900px;
+	height: 600px;
+	margin: 50px auto;
+	background-color: rgb(246, 245, 239);
+	border-radius: 30px;
+	box-shadow: 0 2px 5px rgba(238, 203, 28, 0.05);
+	padding: 40px;
+ }
+ .avatar{
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+ }
+ 
+ .infoUser{
+	width:100% ;
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		margin: 10px;
+		box-shadow: 0 0 5px grey;
+		padding: 30px;
+	 }
+	 
+ .infoTitle{
+	font-size:24px ;
+	color: #e3e4ed;
+	
+	margin-left:50px;
+ }
+
+	.listUser {
+		
+ width: 100%;
+	  display: flex;
+	  align-items: center;
+	 
+	  margin-bottom: 15px;
+	  background-color: antiquewhite;
+ 
+	 
+	  }
+ 
+	  h3 {
+		
+		 color: #d2d3dc;
+	  }
+ 
+ 
+ 

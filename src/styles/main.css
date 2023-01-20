@@ -1,0 +1,174 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+/*
+font-family: 'DM Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+/* * {
+    border: 1px solid red;
+} */
+
+:root {
+	/* Colors */
+	--blackpure: #000;
+	--black: #171718;
+	--black-border: #26292d;
+	--white: #fff;
+	--purple: #5c62ec;
+
+	/* Nav */
+	--nav-bg: var(--black);
+	--nav-border: var(--black-border);
+	--nav-text: var(--white);
+
+	/* Header */
+	--header-bg: var(--black);
+	--header-text: var(--white);
+
+	/* Footer */
+	--footer-bg: var(--black);
+	--footer-text: var(--white);
+
+	/* Light mode */
+	--page-bg: var(--white);
+	--text-color: var(--black);
+	--accent: var(--purple);
+	--title-1: var(--accent);
+
+	--project-card-bg: var(--white);
+	--project-card-text: var(--black);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+	/* Dark mode */
+	--page-bg: #252526;
+	--text-color: var(--white);
+
+	--title-1: var(--white);
+
+	--project-card-bg: var(--black);
+	--project-card-text: var(--white);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+}
+ body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+   
+    letter-spacing: -0.5px;
+
+    /* Light mode */
+    background-color: var(--page-bg);
+    color: var(--text-color);
+}
+
+/* General */
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 620px) {
+
+    /* Header  */
+
+    .header {
+        min-height: unset;
+    }
+
+    .header__title {
+        font-size: 30px;
+    }
+
+    .header__title strong {
+        font-size: 40px;
+    }
+
+    /* Nav */
+
+    .nav-row {
+        justify-content: space-between;
+    }
+
+    .dark-mode-btn {
+        order: 0;
+    }
+
+    /* General */
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .title-1 {
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+
+    .title-2 {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    /* Projects */
+
+    .project__title {
+        font-size: 22px;
+    }
+
+    /* Project page */
+
+    .project-details__desc {
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
+    /* Content List */
+
+    .content-list {
+        row-gap: 20px;
+    }
+
+    .content-list__item {
+        font-size: 16px;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 40px 0 30px;
+    }
+
+    .footer__wrapper {
+        row-gap: 20px;
+    }
+
+    /* Social */
+
+    .social {
+        column-gap: 20px;
+    }
+
+    .social__item {
+        width: 28px;
+    }
+}
+
+
