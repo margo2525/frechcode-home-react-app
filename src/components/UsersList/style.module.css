@@ -50,7 +50,7 @@
  button {
 	margin-left: auto;
  }
- .send-invite-btn {
+ .sendinvitebtn {
 	
 	background-color: rgb(251, 80, 0);
 	padding: 16px 15px;
@@ -66,11 +66,11 @@
 	transition: all 0.1s ease-in-out;
  }
  
-.send-invite-btn:hover {
+.sendinvitebtn:hover {
 	  background-color: rgb(255, 97, 24);
 	}
  
-	.send-invite-btn:active {
+	.sendinvitebtn:active {
 	  transform: translateY(2px);
 	  box-shadow: none;
 	}

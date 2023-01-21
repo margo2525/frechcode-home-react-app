@@ -31,7 +31,7 @@ function UsersListItem(props) {
 				<div style={inlineCardStyle}>
 					<img src={imgsrc} className={style.userPhoto} alt="#" />
 					<div onClick={(event) => deleteUser(event, id)}>
-						<button className="send-invite-btn">+</button>
+						<button className={style.sendinvitebtn}>+</button>
 					</div>
 				</div>
 				<div className={style.boxcontener}>

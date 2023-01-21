@@ -1,10 +1,14 @@
 import React from 'react';
 import CalendarCard from "../components/Calender/CardCalendar";
-
+import './../styles/projects.module.css'
 const Projects = () => {
 	return (
 		<>
-			<CalendarCard />
+			<div className='headerGLCard'>
+				<CalendarCard />
+
+			</div>
+
 
 		</>
 

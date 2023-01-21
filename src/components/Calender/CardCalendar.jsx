@@ -1,5 +1,7 @@
 import React from 'react';
-import Calendar from '.';
+import CurrentDate from './CurrentData/CurrentData';
+import Calendar from './index';
+
 
 
 
@@ -15,7 +17,8 @@ export default class CalendarCard extends React.Component {
 
 		return (
 			<div>
-				{date && <p>Выбранная дата: {date.toLocaleDateString()}</p>}
+
+				<CurrentDate />
 				<Calendar
 					onChange={this.handleDateChange}
 				/>

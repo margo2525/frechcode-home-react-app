@@ -1,0 +1,36 @@
+
+.headerGLCard {
+margin:0 auto;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button, select {
+	height: 2em;
+	font-size: 1rem;
+	background-color: #fff;
+	color: #363636;
+	border: 1px solid #dbdbdb;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:focus, select:focus {
+	outline: none;
+}
+
+button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: .25em .75em;
+	text-align: center;
+}
+
+select {
+	padding: .25em .5em;
+}

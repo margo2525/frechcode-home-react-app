@@ -2,10 +2,7 @@ import { Component } from 'react';
 import UsersListItem from './UsersListItem';
 import style from './style.module.css'
 
-// Списки і ключі
-// 1 Реакт вміє рендерити масиви
-// 2 Кожен елемент, що повторюється, повинен мати проп key
-//   (унікальний і однозначний для кожного елементу масиву, найчастіше id)
+
 
 const usersData = [
 

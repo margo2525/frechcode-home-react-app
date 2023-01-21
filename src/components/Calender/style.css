@@ -1,9 +1,9 @@
 .calendarCard{
-	margin: 0;
-	padding: 0;
+
 	
-	width: 100vw;
-	height: 100vh;
+	margin:0 auto ;
+	width: 850px;
+	height: 450px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -11,22 +11,31 @@
 	
 	background-color: rgb(14, 84, 103);
 }
-.calendar1{
+.calendar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding:50px ;
 	text-align: center;
-	width:500px ;
-	height:500px ;
-	background-color:rgb(133, 196, 214);
-	
+	width:400px ;
+	height:400px ;
+	background-color:rgb(53, 95, 107);
 }
-.calendar{
-	padding:50px ;
-	width:500px ;
-	height:500px ;
-	background-color:rgb(225, 232, 233);
+.calendar1{
+	display: flex;
 	
-}
 
+	flex-direction:column;
+	text-align: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: normal;
+
+	padding:0;
+	width:400px ;
+	height:400px ;
+	background-color:rgb(133, 196, 214);
+}
 .calendar header {
 	display: flex;
 	justify-content: center;
@@ -48,7 +57,7 @@
 .calendar th {
 	vertical-align: middle;
 	text-align: center;
-	height: 36px;
+	height: 3px;
 }
 
 .calendar .day {
@@ -81,31 +90,28 @@
 }
 
 	
-
-
-button, select {
-	height: 2em;
-	font-size: 1rem;
-	background-color: rgb(107, 214, 183);
-	color: #1a0505;
-	border: 1px solid #dbdbdb;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
-button:focus, select:focus {
-	outline: none;
-}
-
-button {
-	background-color: aquamarine;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	padding: .25em .75em;
-	text-align: center;
-}
-
-select {
-	padding: .25em .5em;
-}
+	button, select {
+		height: 2em;
+		font-size: 1rem;
+		background-color: #fff;
+		color: #363636;
+		border: 1px solid #dbdbdb;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	
+	button:focus, select:focus {
+		outline: none;
+	}
+	
+	button {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		padding: .25em .75em;
+		text-align: center;
+	}
+	
+	select {
+		padding: .25em .5em;
+	}

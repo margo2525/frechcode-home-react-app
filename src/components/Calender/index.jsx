@@ -1,9 +1,10 @@
 import React from 'react';
 import classnames from 'classnames';
+import { format } from 'date-fns';
 
 import * as calendar from './Calender';
 
-import './style.module.css';
+import './style.css';
 
 export default class Calendar extends React.Component {
 	static defaultProps = {
@@ -67,15 +68,12 @@ export default class Calendar extends React.Component {
 
 		return (
 			<div className="calendarCard">
-				<div className="calendar1">
-
-					<h2></h2>
-
-					<p>7</p>
-
-				</div>
-
 				<div className="calendar">
+
+					<div className={this.monthName}>{format(new Date(), "'Today is a' eeee")}</div>
+					<div className={this.currentDay}>{currentDate.getDate()}</div>
+				</div>
+				<div className="calendar1">
 					<header>
 						<button onClick={this.handlePrevMonthButtonClick}>{'<'}</button>
 
