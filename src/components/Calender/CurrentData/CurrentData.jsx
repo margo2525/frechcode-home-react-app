@@ -10,7 +10,6 @@ const CurrentDate = () => {
 		<div className={styles.container}>
 
 
-			<div className={styles.currentDay}>{currentDate.getDate()}</div>
 
 		</div>
 	);

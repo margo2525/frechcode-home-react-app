@@ -1,73 +1,61 @@
-import { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import getUsers from '../../api';
 
-class UsersLoader extends Component {
-	constructor(props) {
-		super(props);
 
-		this.state = {
-			users: [],
-			isFetching: false,
-			error: null,
-			currentPage: 1,
-		};
-	}
-
-	loadUsers = () => {
-		const { currentPage } = this.state;
-
-		this.setState({ isFetching: true });
-		fetch(`https://randomuser.me/api?results=5&seed=pe2022&page=${currentPage}`)
-			.then(response => response.json())
-			.then(data => this.setState({ users: data.results }))
-			.catch(e => this.setState({ error: e }))
-			.finally(() => this.setState({ isFetching: false }));
+function UsersLoader() {
+	const [users, setUsers] = useState([]);
+	const [isFetching, setIsFetching] = useState(false);
+	const [error, setError] = useState(null);
+	const [currentPage, setCurrentPage] = useState(1);
+	const [results, setResults] = useState(5);
+ 
+	const loadUsers = () => {
+	  setIsFetching(true);
+	  // getUsers({ page: currentPage, results: 5 })
+	  fetch(
+		 `https://randomuser.me/api?page=${currentPage}&results=${results}&seed=pe2022`
+	  )
+		 .then(response => response.json())
+		 .then(data => setUsers(data.results))
+		 .catch(e => setError(e))
+		 .finally(() => setIsFetching(false));
 	};
-
-	componentDidMount() {
-		this.loadUsers();
-	}
-
-	componentDidUpdate(prevProps, prevState) {
-		const { currentPage } = this.state;
-
-		if (currentPage !== prevState.currentPage) {
-			this.loadUsers();
-		}
-	}
-
-	prevPage = () => {
-		const { currentPage } = this.state;
-		if (currentPage > 1) {
-			this.setState({ currentPage: currentPage - 1 });
-		}
+ 
+	useEffect(() => {
+	  loadUsers();
+	}, [currentPage, results]);
+ 
+	const prevPage = () => {
+	  if (currentPage > 1) {
+		 setCurrentPage(currentPage => currentPage - 1);
+	  }
 	};
-
-	nextPage = () => {
-		const { currentPage } = this.state;
-		this.setState({ currentPage: currentPage + 1 });
+ 
+	const nextPage = () => {
+	  setCurrentPage(currentPage => currentPage + 1);
+	  // setValue(10)
+	  // setValue(function (value) {
+	  //   return value + 1;
+	  // });
+	  // setValue(value=>value + 1);
 	};
-
-	render() {
-		const { users, isFetching, error } = this.state;
-
-		return (
+ 
+	return (
+	  <>
+		 {error && <div>!!!ERROR!!! {JSON.stringify(error)}</div>}
+		 {isFetching && <div>Loading. Please waite...</div>}
+		 {!error && !isFetching && (
 			<>
-				{error && <div>!!!ERROR!!! {JSON.stringify(error)}</div>}
-				{isFetching && <div>Loading. Please waite...</div>}
-				{!error && !isFetching && (
-					<>
-						<button onClick={this.prevPage}>{'<'}</button>
-						<button onClick={this.nextPage}>{'>'}</button>
-						<ul>
-							{users.map(u => (
-								<li key={u.id}>{JSON.stringify(u)}</li>
-							))}
-						</ul>
-					</>
-				)}
+			  <button onClick={prevPage}>{'<'}</button>
+			  <button onClick={nextPage}>{'>'}</button>
+			  <ul>
+				 {users.map(u => (
+					<li key={u.login.uuid}>{JSON.stringify(u)}</li>
+				 ))}
+			  </ul>
 			</>
-		);
-	}
-}
-
+		 )}
+	  </>
+	);
+ }
 export default UsersLoader;

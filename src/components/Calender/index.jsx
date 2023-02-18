@@ -12,13 +12,12 @@ export default class Calendar extends React.Component {
 		years: [2023],
 		monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'Novermber', 'December'],
 		weekDayNames: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
-		onChange: Function.prototype
 	};
 
 	state = {
 		date: this.props.date,
 		currentDate: new Date(),
-		selectedDate: null
+
 	};
 
 	get year() {
@@ -54,11 +53,6 @@ export default class Calendar extends React.Component {
 		this.setState({ date });
 	};
 
-	handleDayClick = date => {
-		this.setState({ selectedDate: date });
-
-		this.props.onChange(date);
-	};
 
 	render() {
 		const { years, monthNames, weekDayNames } = this.props;
@@ -67,13 +61,13 @@ export default class Calendar extends React.Component {
 		const monthData = calendar.getMonthData(this.year, this.month);
 
 		return (
-			<div className="calendarCard">
-				<div className="calendar">
+			<div className="calendar">
+				<div className="calendar1">
 
 					<div className={this.monthName}>{format(new Date(), "'Today is a' eeee")}</div>
 					<div className={this.currentDay}>{currentDate.getDate()}</div>
 				</div>
-				<div className="calendar1">
+				<div className="calendar2">
 					<header>
 						<button onClick={this.handlePrevMonthButtonClick}>{'<'}</button>
 

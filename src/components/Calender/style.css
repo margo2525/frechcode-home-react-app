@@ -1,4 +1,4 @@
-.calendarCard{
+.calendar{
 
 	
 	margin:0 auto ;
@@ -9,19 +9,21 @@
 	justify-content: center;
 	align-items: center;
 	
-	background-color: rgb(14, 84, 103);
+	background-color: rgb(4, 74, 75);
 }
-.calendar{
+.calendar1{
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding:50px ;
 	text-align: center;
+	font-size:40px;
 	width:400px ;
 	height:400px ;
-	background-color:rgb(53, 95, 107);
+	background-color:rgb(159, 222, 222);
 }
-.calendar1{
+.calendar2{
 	display: flex;
 	
 
@@ -30,11 +32,10 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: normal;
-
 	padding:0;
 	width:400px ;
 	height:400px ;
-	background-color:rgb(133, 196, 214);
+	background-color:rgb(83, 147, 174);
 }
 .calendar header {
 	display: flex;

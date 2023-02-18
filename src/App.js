@@ -1,3 +1,12 @@
+import {
+  BrowserRouter as Router,
+  Link,
+  NavLink,
+  Route,
+  Switch,
+  useHistory,
+  useRouteMatch,
+} from 'react-router-dom';
 
 import Footer from './components/footer/Footer';
 import Main from './components/main/Main';
@@ -15,6 +24,7 @@ import './styles/main.css';
 function App() {
   return (
     <div className="App">
+
 
 
       <Navbar />

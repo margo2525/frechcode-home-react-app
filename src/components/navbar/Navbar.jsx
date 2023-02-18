@@ -1,5 +1,6 @@
 
-import './Navbar.module.css'
+
+import './Navbar.css'
 
 import BtnDarkMode from '../btnDarkMode/BtnDarkMode';
 
